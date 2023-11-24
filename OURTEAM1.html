@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HEALTHBEE</title>
+    <link rel="icon" type="image/x-icon" href="download.png">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  background-color: white;
+}
+
+/* Header/Blog Title */
+.header {
+  
+  text-align: center;
+  background: white;
+}
+
+.header h1 {
+  font-size: 50px;
+}
+
+
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  background-color: #f1f1f1;
+  padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card{
+  background-color:rgb(149, 237, 207);
+  background-image: url("download.png");
+  background-position: right;
+  background-repeat: no-repeat;
+  background-blend-mode:lighten;
+  border-LEFT-style:inseT;
+  border-left-width: 6PX;
+  border-left-color: rgb(150, 145, 145);
+  border-right-style: outset;
+  border-right-width: 9PX;
+  border-right-color:rgb(150,145,145);
+  border-top-width: 4px;
+  border-top-style:inset;
+  border-top-color:rgb(150,145,145) ;
+  border-bottom-width: 4px;
+  border-bottom-style: outset;
+  border-bottom-color: rgb(150,145,145);
+  padding-left: 110px;
+  padding-right: 110px;
+  margin-top: 10px;
+  border-bottom-left-radius: 70%;
+  border-top-right-radius: 70%;
+  border-top-left-radius: 95%;
+  border-bottom-right-radius:100%;
+}
+.card1{
+  
+  background-color: rgb(53, 151, 118);
+
+ 
+  margin-top: 10px;
+
+}
+
+.card2{
+  background-color: rgb(190, 195, 195);
+  
+
+}
+
+.card3{
+  background-color: rgb(55,66,66);
+
+}
+
+
+/* Clear floats after the columns */
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  
+  color: aliceblue;
+
+}
+.footer1 {
+  
+  background: rgb(55, 66, 66);
+  color: aliceblue;
+
+}
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+  .topnav .search-container {
+  float: right;
+  
+}
+
+.topnav input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+  
+}
+
+.topnav .search-container button {
+  float: right;
+  padding: 6px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+  
+}
+
+.topnav .search-container button:hover {
+  background: #ccc;
+
+}
+
+@media screen and (max-width: 600px) {
+  .topnav .search-container {
+    float: none;
+  }
+  .topnav a, .topnav input[type=text], .topnav .search-container button {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 20%;
+    margin: 0;
+    padding: 14px;
+  }
+  .topnav input[type=text] {
+    border: 1px solid #ccc;  
+  }
+}
+}
+    body {
+      margin: 0;
+      font-size: 28px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    .header {
+      background-color: #f1f1f1;
+      text-align: center;
+    }
+    #nar {
+      overflow: hidden;
+      background-color: rgb(231, 234, 235);
+      transition: 0.4s;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 99;
+    }
+    
+    #navbar {
+      overflow:hidden;
+      background-color:rgb(231, 234, 235);
+      font-family:'Alice';
+      font-size: 20px;
+    }
+    
+    #navbar a {
+      float: left;
+      display: block;
+      color: black;
+      text-align: center;
+      padding: 20px ;
+      text-decoration: none;
+      border-radius: 5cm;
+      border-color: red;
+    }
+    
+    #navbar a:hover {
+      background-color: rgb(154, 185, 185);
+      color: black;
+    }
+    
+    #navbar a.active {
+      background-color:rgb(1, 92, 92);
+      color: white;
+    }
+    
+    #navbar a.active:hover{
+        background-color: rgb(154, 185, 185);
+        color:black
+    }
+    #navbar-right{
+        float: right;
+        font-size: 17px;
+    }
+    
+    .content {
+      padding: 16px;
+    }
+    
+    .sticky {
+      position: fixed;
+      top: 0;
+      width: 100%;
+    }
+    
+    .sticky + .content {
+      padding-top: 60px;
+    }
+    * {box-sizing: border-box;}
+    body {font-family: Verdana, sans-serif;}
+    .mySlides {display: none;}
+    img {vertical-align: middle;}
+    
+    
+    
+    .slideshow-container {
+      max-width: 1000px;
+      position: relative;
+      margin: auto;
+    }
+    
+    .dot {
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+    
+    .active {
+      background-color: #717171;
+    }
+    
+    .fade {
+      animation-name: fade;
+      animation-duration: 1.4s;
+    }
+    
+    @keyframes fade {
+      from {opacity: .4} 
+      to {opacity: 1}
+    }
+    
+    
+    @media screen and (max-width: 580px) {
+        #navbar {
+          padding: 40px 10px !important;
+        
+        }}
+
+.social{
+    background-color: rgb(32, 60, 85);
+    padding:10px;
+    float:left;
+    
+}
+
+.button1{
+    border: black;
+  outline: black;
+  display: inline-block;
+  padding: 8px;
+  width: 20px;
+  height: 50px;
+  align-self: center;
+  color: whitesmoke;
+  background-color: black;
+  text-align: center;
+  cursor: pointer;
+  width: 10%;
+  font-size: 15px;
+
+}
+
+.button1:hover{
+  
+    background-color:rgb(9, 129, 89);
+    color: white;
+}
+.button2{
+    border: black;
+  outline: black;
+  display: inline-block;
+  padding: 8px;
+  width: 25%;
+  align-self: center;
+  color: black;
+  background-color: darkslategray;
+  text-align: center;
+  cursor: pointer;
+  
+  font-size: 12px;
+
+}
+.button3{
+    border: black;
+  outline: black;
+  display: inline-block;
+  padding: 8px;
+  width: 25%;
+  background-color: rgb(190, 195, 195);
+  align-self: center;
+  color: black;
+  text-align: center;
+  cursor: pointer;
+  
+  font-size: 12px;
+
+}
+
+.button4{
+    border: black;
+  outline: black;
+  display: inline-block;
+  padding: 8px;
+  width: 50%;
+  background-color: rgb(190, 195, 195);
+  align-self: center;
+  color: black;
+  text-align: center;
+  cursor: pointer;
+  font-size: 20px;
+
+}
+
+.button4:hover{
+  background-color: #000;
+  color: whitesmoke;
+}
+
+.button5{
+    border: black;
+  outline: black;
+  display: inline-block;
+  padding: 8px;
+  width: 25%;
+  background-color: rgb(55, 66, 66);
+  align-self: center;
+  color: black;
+  text-align: center;
+  cursor: pointer;
+  
+  font-size: 12px;
+
+}
+
+.button6{
+    border: black;
+  outline: black;
+  display: inline-block;
+  padding: 8px;
+  width: 15%;
+  border-radius: 100%;
+  border-width: 4px solid white;
+  background-color: rgb(55,66,66);
+  align-self: center;
+  color: black;
+  text-align: center;
+  cursor: pointer;
+  font-size: 20px;
+
+}
+
+.button6:hover{
+  background-color:dodgerblue;
+  color: skyblue;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: rgb(29, 209, 209);
+  color: black;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+.button7 {
+  background-color: rgb(232, 28, 167);
+  color: black;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;  
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 20%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+  font-size: 25px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 50%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* Add a background color when the inputs get focus */
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for all buttons */
+buton {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+buton:hover {
+  opacity:1;
+}
+
+/* Extra styles for the cancel button */
+.cancelbt {
+  padding: 14px 20px;
+  background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbt, .signupbt {
+  float: left;
+  width: 50%;
+}
+
+/* Add padding to container elements */
+.container1 {
+  padding-top: 10PX;
+  padding-left: 16px;
+  padding-right: 360PX;
+}
+
+/* The Modal (background) */
+.modal1 {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: #474e5d;
+  padding-top: 50px;
+}
+
+/* Modal Content/Box */
+.modal1-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* Style the horizontal ruler */
+hr {
+  border: 1px solid #111010;
+  margin-bottom: 25px;
+}
+ 
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 35px;
+  top: 15px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #f1f1f1;
+}
+
+.close:hover,
+.close:focus {
+  color: #f44336;
+  cursor: pointer;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancelbt, .signupbt {
+     width: 100%;
+  }
+}
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px; /* Should be removed. Only for demonstration */
+}
+
+
+/* Clear floats after the columns */
+.row1:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.column1 {
+  float: left;
+  width: 40%;
+  padding: 10px; /* Should be removed. Only for demonstration */
+}
+
+.row2:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column3 {
+  float: left;
+  width: 50%;
+  padding: 0px; /* Should be removed. Only for demonstration */
+}
+
+
+/* Clear floats after the columns */
+.row4:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.vertical {
+      border-left: 3px solid white;
+      height: 150px;
+      position:absolute;
+      left: 40%;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column6 {
+  float: left;
+  width: 50%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+@media screen and (max-width: 650px) {
+  .column6 {
+    width: 100%;
+    display: block;
+  }
+}
+
+.card6 {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin-right: 2.5px;
+  margin-left: 2.5px;
+  background-color:rgb(110, 228, 236);
+  background-image: url("img_avatar1.png");
+  background-position: RIGHT;
+  background-repeat: no-repeat;
+  background-blend-mode:lighten;
+  border-width: 4px;
+  border-top-right-radius: 26%;
+  border-bottom-left-radius: 16% ;
+  border-top-left-radius: 6%;
+  border-bottom-right-radius: 6%;
+  border-color: black;
+  border-top-style: inset;
+  border-top-width: 5px;
+  border-top-color: rgb(29, 209, 209);
+  border-bottom-style: outset;
+  border-bottom-width: 3px;
+  border-bottom-color: #111010; 
+  border-left-style: inset;
+  border-left-width: 5px;
+  border-left-color: rgb(29, 209, 209);
+  border-right-style: outset;
+  border-right-width: 2px;
+  border-bottom-color: #111010;
+  
+}
+.card7 {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin-right: 2.5px;
+  margin-left: 2.5px;
+  background-color:rgb(241, 173, 184);
+  background-image: url("img_avatar3.png");
+  background-position: right;
+  background-repeat: no-repeat;
+  background-blend-mode:lighten;
+  border-top-right-radius: 16%;
+  border-bottom-left-radius: 16% ;
+  border-top-left-radius: 6%;
+  border-bottom-right-radius: 6%;
+  border-width: 4px;
+  border-top-right-radius: 26%;
+  border-bottom-left-radius: 16% ;
+  border-top-left-radius: 6%;
+  border-bottom-right-radius: 6%;
+  border-color: black;
+  border-top-style: inset;
+  border-top-width: 5px;
+  border-top-color: rgb(247, 59, 188);
+  border-bottom-style: outset;
+  border-bottom-width: 3px;
+  border-bottom-color: #111010; 
+  border-left-style: inset;
+  border-left-width: 5px;
+  border-left-color: rgb(247, 59, 188);
+  border-right-style: outset;
+  border-right-width: 2px;
+  border-bottom-color: #111010;
+}
+
+.container2 {
+  
+  background-color:;
+  background-position: center;
+}
+.container3 {
+  padding: 0 16px;
+  background-color:rgb(149, 237, 207);;
+  background-position: center;
+}
+
+
+.container1::after, .row5::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+  font-size: 20px;
+}
+
+.button8 {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: rgb(10, 59, 59);
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button8:hover {
+  background-color: #555;
+}
+</style>
+    </head>
+    <body>
+       <div id="nar">
+            <a href="2.html"><center><img src="download.png" alt="HEALTHBEE_LOGO" width="7%"></A>
+              <div id="navbar">
+                <a href="2.html" alt="Home">HOME</a>
+                <a class="active" href="OURTEAM1.html">ABOUT US</a>
+                <a href="javascript:void(0)">WELLNESS</a>
+                <a href="javascript:void(0)">BEAUTY</a>
+                <a href="javascript:void(0)">FITNESS</a>
+                <a href="javascript:void(0)">SHOP</a>
+                
+                
+  
+              <div id="navbar-right">
+                <a class="active" href="Login.html">Contact <BR>Us</a>
+                <a class="active" href="Login.html">Login/<Br> Sign Up</a></div>
+              </div>
+          </div>
+          <hr>
+          
+          <div style="margin-top:110px;padding:15px 15px 250px;font-size:30px">
+    <br>
+       
+    <CENTER><H1 style="font-family: 'Sunshine';font-size: 90PX; color: #40a7e3;">Meet the TEAM</H1></CENTER>
+    <hr>
+    </body>
+    <div class="row5">
+      <div class="column6">
+        <div class="card6">
+          <div class="container1">
+          <center> <h2 style="font-family: Alice;font-size: 35px;">Saksham Goyal</h2>
+            <p class="title">CEO & Founder</p></center>
+            <hr>
+            <p style="font-size:20px">-</p>
+            <p style="font-size:17px"><img src="call.png" width="55px">&nbsp +91 99713 00471</p>
+            <p style="font-size:17px"><img src="mail.png" width="53px">&nbsp sakshamgo.3004@gmail.com</p>
+            
+            <p><button class="button"><b>ABOUT</b></button></p>
+          </div>
+        </div>
+      </div>
+    
+      
+        <div class="column6">
+          <div class="card6">
+            <div class="container1">
+            <center> <h2 style="font-family: Alice;font-size: 35px;">Vishnu Manu</h2>
+              <p class="title">Management Executive</p></center>
+              <hr>
+              <p style="font-size:20px">-</p>
+              <p style="font-size:17px"><img src="call.png" width="55px">&nbsp +91 85955 04407 </p>
+            <p style="font-size:17px"><img src="mail.png" width="53px">&nbsp vishnumanu.4407@gmail.com</p>
+            <p><button class="button"><b>ABOUT</b></button></p>
+            </div>
+          </div>
+        </div>
+      
+          <div class="column6">
+            <div class="card6">
+              <div class="container1">
+              <center>   <h2 style="font-family: Alice;font-size: 35px;">Sanjay Singh</h2>
+                <p class="title">-</p></center>
+                <hr>
+                <p style="font-size:20px">-</p>
+                <p style="font-size:17px"><img src="call.png" width="55px">&nbsp +91 93113 07771 </p>
+            <p style="font-size:17px"><img src="mail.png" width="53px">&nbsp Sanjay@sharsh.xyz</p>
+            <p><button class="button"><b>ABOUT</b></button></p>
+              </div>
+            </div>
+          </div>
+            <div class="column6">
+              <div class="card7">
+                <div class="container1">
+                 <center> <h2 style="font-family: Alice;font-size: 35px;">Nidhi Rana</h2>
+                  <p class="title">Designer</p></center>
+                  <hr>
+                  <p style="font-size:20px">-</p>
+                  <p style="font-size:17px"><img src="call.png" width="55px">&nbsp +91 96252 12924 </p>
+            <p style="font-size:17px"><img src="mail.png" width="53px">&nbsp nidhirana5006@gmail.com</p>
+            <p><button class="button7"><b>ABOUT</b></button></p>
+                </div>
+              </div>
+            </div>   
+              <div class="column6">
+                <div class="card6">
+                  <div class="container1">
+                  <center> <h2 style="font-family: Alice;font-size: 35px;">Agastya Gautam</h2>
+                    <p class="title">-</p></center>
+                    <hr>
+                    <p style="font-size:20px">-</p>
+                    <p style="font-size:17px"><img src="call.png" width="55px">&nbsp +91 92056 31504 </p>
+                    <p style="font-size:17px"><img src="mail.png" width="53px">&nbsp soulles700@gmail.com</p>
+                    <p><button class="button"><b>ABOUT</b></button></p>
+                  </div>
+                </div>
+              </div>
+    </div>
+    <hr>
+    <div class="card2"><div class="row1">
+        <div class="column" style="background-color:rgb(190,195,195);">
+             <CENTER><h2 style="font-size: 25px;"><a href="2.html"><button class="button4"><b>HOME</b></button></a></h2>
+               <h2 style="font-size: 25px;"><a href="OURTEAM1.html"><button class="button4"><b>ABOUT US</b></button></h2>
+               <h2 style="font-size: 25px;"><button class="button4"><b>WELLNESS</b></button></a></h2>
+           </div></CENTER>
+           <div class="column" style="background-color:rgb(190,195,195);">
+             <CENTER><h2 style="font-size: 25px;"><button class="button4"><b>BEAUTY</b></button></h2>
+               <h2 style="font-size: 25px;"><button class="button4"><b>FITNESS</b></button></h2>
+               <h2 style="font-size: 25px;"><button class="button4"><b>SHOP</b></button></h2>
+           </div></CENTER><br><br>
+          
+           
+         </div>
+     </footer></a><br>
+     <div class="card3"><div class="row2">
+        
+         <div class="column1" style="background-color:rgb(55, 66, 66);">
+             <CENTER><h2 style="font-size: 25px;"><a href="https://www.instagram.com/sakshamm.goyal/"><button class="button6"><img src="C:\Users\saksh\OneDrive\Desktop\CIRCUIT BREAKERS\HEALTHBEE\D.png" width="45px" height="35px"></button></a><a href="2.html"><button class="button6"><img src="C:\Users\saksh\OneDrive\Desktop\CIRCUIT BREAKERS\HEALTHBEE\g.png" width="35px" height="35px"></button></a><a href="youtube.com"><button class="button6"><img src="C:\Users\saksh\OneDrive\Desktop\CIRCUIT BREAKERS\HEALTHBEE\images.png" width="55px" height="35px"></button></a><a href="#"><button class="button6"><img src="C:\Users\saksh\OneDrive\Desktop\CIRCUIT BREAKERS\HEALTHBEE\Picture1.png" width="40px" height="35px"></button></a><a href="#"><button class="button6"><img src="C:\Users\saksh\OneDrive\Desktop\CIRCUIT BREAKERS\HEALTHBEE\Picture3.png" width="50px" height="40px"></button></a><a href="#"><button class="button6"><img src="C:\Users\saksh\OneDrive\Desktop\CIRCUIT BREAKERS\HEALTHBEE\wa.png" width="50px" height="50px"></button></a>
+         </div></CENTER>
+     <div class="vertical"></div>
+     
+         <div class="column1" style="background-color:rgb(55, 66, 66 );">
+          
+           
+         </div></CENTER>
+         <a href="2.html"><button class="button5"><footer class="footer"><img src="C:\Users\saksh\OneDrive\Desktop\CIRCUIT BREAKERS\q1.png" width="80px" height="80px">&nbsp&nbsp&nbsp<font style="font-family: 'Johnfoster';color:white;font-size:50px">Circuit Breakers</font></button> <a href="2.html"><button class="button5"><footer class="footer"><img src="download.png" width="100px" height="100px">&nbsp&nbsp<font style="font-family: 'Herr Von Muellerhoff';color:white;font-size:50px">HealthBee</font></button>
+       </div>
+     </footer></a>
+        
+
+
+<script>
+    window.onscroll = function() {myFunction()};
+    
+    var navbar = document.getElementById("navbar");
+    var sticky = navbar.offsetTop;
+    
+    function myFunction() {
+      if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky")
+      } else {
+        navbar.classList.remove("sticky");
+      }
+    }
+    window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+      if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+        document.getElementById("nar").style.padding = "2px 0px";
+        document.getElementById("logo").style.fontSize = "25px";
+      } else {
+        document.getElementById("nar").style.padding = "30px 0px";
+        document.getElementById("logo").style.fontSize = "35px";
+      }
+    }
+    
+    let slideIndex = 0;
+    showSlides();
+    
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+      setTimeout(showSlides, 5000); 
+    }
+    // Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+// Get the modal
+var modal1 = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal1) {
+    modal1.style.display = "none";
+  }
+}
+function myFunction1() {
+  var x = document.getElementById("myInput");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+</script>
+
+</body>
+</html>
+
